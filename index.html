@@ -10,6 +10,11 @@
 <meta property="og:title" content="DJ BLIK">
 <meta property="og:description" content="Nowy album LAN – premiera 12.11.2026. Koncert premierowy: Klub Mechanik, Warszawa, 26.11.2026.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://djblik.com/">
+<meta property="og:image" content="https://djblik.com/lan-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800;900&family=Chakra+Petch:ital,wght@0,400;0,500;0,700;1,400&display=swap">
@@ -268,17 +273,19 @@ section.block { padding-block: clamp(56px, 9vw, 110px); }
 .landing dd { margin: 0; color: var(--text); }
 
 /* Muzyka */
-.disco { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); }
-.rel { padding: clamp(20px, 3vw, 30px); border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.rel:first-child { border-left: 0; background: var(--panel); }
+.disco { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.rel { padding: clamp(20px, 3vw, 30px); background: var(--void); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.rel.feature { grid-column: 1 / -1; background: var(--panel); display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: clamp(20px, 3.5vw, 44px); align-items: center; }
+.rel.feature .info { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.cover { display: block; width: 100%; max-width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1.5px solid var(--acid); box-shadow: 0 0 40px rgba(196,242,13,.14); }
+.rel.feature .btn { align-self: flex-start; margin-top: 6px; }
 .rel .type { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
 .rel h3 { font-family: var(--display); font-weight: 900; font-size: clamp(28px, 3.6vw, 44px); margin: 0; color: var(--acid); line-height: 1; transform: skewX(-12deg); transform-origin: left bottom; }
 .rel p { margin: 0; font-size: 16px; }
 .rel .new { align-self: flex-start; background: var(--acid); color: var(--void); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 3px 8px; }
 @media (max-width: 820px) {
   .disco { grid-template-columns: 1fr; }
-  .rel { border-left: 0; border-top: 1px solid var(--line); }
-  .rel:first-child { border-top: 0; }
+  .rel.feature { grid-template-columns: 1fr; }
 }
 .platforms { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .genres { margin-top: 18px; color: var(--muted); font-size: 14px; letter-spacing: .16em; text-transform: uppercase; }
@@ -340,7 +347,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <p class="kicker">Międzygalaktyczny producent i DJ</p>
         <p class="lead">Nowy album <strong>LAN – Local Area Network</strong> już jest. 10 utworów, premiera 12.11.2026. Na żywo: <strong>Klub Mechanik, 26.11</strong>.</p>
         <div class="btns">
-          <a class="btn solid" href="https://open.spotify.com/artist/7xVjiA11JIFZzGlj9AEAgE" target="_blank" rel="noopener">Słuchaj LAN</a>
+          <a class="btn solid" href="https://e-muzyka.link/DJBLIKLAN" target="_blank" rel="noopener">Słuchaj LAN</a>
           <a class="btn" href="#koncerty">Koncert premierowy</a>
         </div>
       </div>
@@ -445,12 +452,16 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   <div class="wrap">
     <div class="h-label"><h2>Muzyka</h2><span class="tag">Dyskografia</span></div>
     <div class="disco">
-      <article class="rel">
-        <span class="new">Nowość</span>
-        <span class="type">Album · 12.11.2026</span>
-        <h3>LAN</h3>
-        <p>Drugi album: 10 utworów, po połowie instrumentalnych i wokalnych. Gościnnie Dominika Płonka i stas. Na płycie m.in. „Voyager”, „Odpływające Statki” i „LAN (szukałem co mam)”.</p>
-        <p class="credit">Okładka: fot. Mateusz Lodziński</p>
+      <article class="rel feature">
+        <a href="https://e-muzyka.link/DJBLIKLAN" target="_blank" rel="noopener" aria-label="Słuchaj albumu LAN"><img class="cover" src="lan-cover.webp" width="900" height="900" alt="Okładka albumu LAN: zdjęcie grupowe z domówki, DJ BLIK wśród przyjaciół z kolektywu LAN" loading="lazy"></a>
+        <div class="info">
+          <span class="new">Nowość</span>
+          <span class="type">Album · 12.11.2026</span>
+          <h3>LAN</h3>
+          <p>Drugi album: 10 utworów, po połowie instrumentalnych i wokalnych. Gościnnie Dominika Płonka i stas. Na płycie m.in. „Voyager”, „Odpływające Statki” i „LAN (szukałem co mam)”.</p>
+          <a class="btn solid" href="https://e-muzyka.link/DJBLIKLAN" target="_blank" rel="noopener">Słuchaj LAN</a>
+          <p class="credit">Okładka: fot. Mateusz Lodziński</p>
+        </div>
       </article>
       <article class="rel">
         <span class="type">Album · 2023</span>
