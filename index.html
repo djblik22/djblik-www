@@ -185,17 +185,10 @@ section.block { padding-block: clamp(56px, 9vw, 110px); }
   color: var(--acid); text-shadow: 0 0 22px rgba(196,242,13,.45), 0 0 2px var(--acid);
 }
 .lan-sub { display: flex; justify-content: space-between; max-width: 520px; letter-spacing: .3em; font-size: 14px; color: var(--acid-dim); margin-top: 8px; text-transform: uppercase; }
-.never {
-  font-family: var(--display); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px);
-  color: var(--acid); margin: 8px 0 0; transform: skewX(-12deg); display: inline-block;
-}
-.focus {
-  margin-top: 28px; padding: 18px 20px; border: 1px solid var(--line); background: var(--panel);
-  display: flex; gap: 14px 22px; align-items: center; flex-wrap: wrap; justify-content: space-between;
-}
-.focus .t { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-.focus .n { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--acid); }
-.focus .n em { font-family: var(--body); font-style: normal; font-weight: 500; font-size: 17px; color: var(--text); }
+.never { margin: 1.6em 0 0 !important; font-size: 19px; font-weight: 700; color: var(--acid); }
+.clip { margin-top: clamp(28px, 4vw, 40px); }
+.clip-title { font-family: var(--display); font-weight: 800; font-size: clamp(18px, 2vw, 22px); line-height: 1.2; color: var(--acid); margin: 0 0 12px; text-wrap: balance; }
+.clip-title em { font-family: var(--body); font-style: normal; font-weight: 500; font-size: .85em; color: var(--text); }
 
 .manifest .t-label { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2em; }
 .never-sub { margin: 4px 0 0 !important; font-size: 19px; color: var(--acid); }
@@ -222,12 +215,8 @@ section.block { padding-block: clamp(56px, 9vw, 110px); }
 .merch-copy strong { color: var(--acid); }
 @media (max-width: 600px) { .merch-copy { margin-left: 0; flex-basis: 100%; } }
 
-.video-wrap { margin-top: clamp(40px, 6vw, 72px); }
 .video { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border: 1.5px solid var(--acid); background: var(--panel); box-shadow: 0 0 40px rgba(196,242,13,.12); }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.video-cap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.video-cap a { color: var(--acid-dim); text-decoration: none; }
-.video-cap a:hover { color: var(--acid); }
 
 /* Koncert */
 .ticket {
@@ -312,7 +301,7 @@ section.block { padding-block: clamp(56px, 9vw, 110px); }
 .contact { border-top: 1px solid var(--line); }
 .mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
 .mail {
-  font-family: var(--display); font-weight: 800; font-size: clamp(24px, 4.6vw, 52px);
+  font-family: var(--display); font-weight: 800; font-size: clamp(20px, 3vw, 32px);
   color: var(--acid); user-select: all; overflow-wrap: anywhere; min-width: 0;
 }
 .socials { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 30px; }
@@ -377,12 +366,11 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <div>
       <p class="lan-word">LAN</p>
       <div class="lan-sub"><span>Local</span><span>Area</span><span>Network</span></div>
-      <div class="focus">
-        <div>
-          <div class="t">Utwór tytułowy</div>
-          <div class="n">LAN (szukałem co mam) <em>feat. stas</em></div>
+      <div class="clip" id="klip">
+        <h3 class="clip-title">LAN (szukałem co mam) <em>feat. stas</em></h3>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/-5NYAUKuseE?rel=0&amp;playsinline=1" title="DJ BLIK – LAN (szukałem co mam) feat. stas – teledysk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <a class="btn" href="#klip">Zobacz klip</a>
       </div>
     </div>
     <div class="prose manifest">
@@ -394,12 +382,6 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <p class="never-sub">To sieć, która należy do nas. To my ją tworzymy, a ona tworzy nas.</p>
       <p class="sig">— DJ BLIK</p>
     </div>
-  </div>
-  <div class="wrap video-wrap" id="klip">
-    <div class="video">
-      <iframe src="https://www.youtube-nocookie.com/embed/-5NYAUKuseE?rel=0" title="DJ BLIK – LAN (szukałem co mam) feat. stas – teledysk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div class="video-cap"><span>Teledysk · LAN (szukałem co mam) feat. stas</span><a href="https://youtu.be/-5NYAUKuseE" target="_blank" rel="noopener">YouTube ↗</a></div>
   </div>
 </section>
 
@@ -427,12 +409,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
     <div class="past">
       <div class="past-row"><span class="y">07.2026</span><span>DJ BLIK live &amp; Dominika Płonka · Nowe Horyzonty, Wrocław</span><a href="https://www.nowehoryzonty.pl/program/26/dj-blik-live-dominika-plonka" target="_blank" rel="noopener">Link ↗</a></div>
-      <div class="past-row"><span class="y">07.2026</span><span>DJ BLIK live &amp; Dominika Płonka · Inspiral Garden, Praga</span><a href="https://instytutpolski.pl/praha/2026/07/02/inspiral-garden-dj-blik-live-dominika-plonka/" target="_blank" rel="noopener">Link ↗</a></div>
+      <div class="past-row"><span class="y">07.2026</span><span>DJ BLIK live &amp; Dominika Płonka · Inspiral Garden, Pilsen</span><a href="https://instytutpolski.pl/praha/2026/07/02/inspiral-garden-dj-blik-live-dominika-plonka/" target="_blank" rel="noopener">Link ↗</a></div>
     </div>
 
     <p class="fests-label">Grał na festiwalach</p>
     <div class="fests" style="margin-top:12px">
-      <span>Open’er</span><span>Audioriver</span><span>FEST Festival</span><span>Pride Fest</span><span>3era Festival</span><span>LightMoveFestival</span><span>NEXT FEST</span><span>Nowe Horyzonty</span>
+      <span>Open’er</span><span>Audioriver</span><span>FEST Festival</span><span>Pride Fest</span><span>3era Festival</span><span>Light.Move.Festival</span><span>NEXT FEST</span><span>Nowe Horyzonty</span><span>Inspiral Garden [CZ]</span>
     </div>
   </div>
 </section>
