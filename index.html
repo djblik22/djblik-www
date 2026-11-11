@@ -222,6 +222,13 @@ section.block { padding-block: clamp(56px, 9vw, 110px); }
 .merch-copy strong { color: var(--acid); }
 @media (max-width: 600px) { .merch-copy { margin-left: 0; flex-basis: 100%; } }
 
+.video-wrap { margin-top: clamp(40px, 6vw, 72px); }
+.video { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border: 1.5px solid var(--acid); background: var(--panel); box-shadow: 0 0 40px rgba(196,242,13,.12); }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.video-cap a { color: var(--acid-dim); text-decoration: none; }
+.video-cap a:hover { color: var(--acid); }
+
 /* Koncert */
 .ticket {
   display: grid; grid-template-columns: auto minmax(0, 1fr) auto;
@@ -375,7 +382,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <div class="t">Utwór tytułowy</div>
           <div class="n">LAN (szukałem co mam) <em>feat. stas</em></div>
         </div>
-        <a class="btn" href="https://www.youtube.com/@djblik22" target="_blank" rel="noopener">Zobacz klip</a>
+        <a class="btn" href="#klip">Zobacz klip</a>
       </div>
     </div>
     <div class="prose manifest">
@@ -387,6 +394,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <p class="never-sub">To sieć, która należy do nas. To my ją tworzymy, a ona tworzy nas.</p>
       <p class="sig">— DJ BLIK</p>
     </div>
+  </div>
+  <div class="wrap video-wrap" id="klip">
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/-5NYAUKuseE?rel=0" title="DJ BLIK – LAN (szukałem co mam) feat. stas – teledysk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-cap"><span>Teledysk · LAN (szukałem co mam) feat. stas</span><a href="https://youtu.be/-5NYAUKuseE" target="_blank" rel="noopener">YouTube ↗</a></div>
   </div>
 </section>
 
